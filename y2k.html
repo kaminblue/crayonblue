@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kami Blog</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap'); /* Usa Orbitron como alternativa a Planet Cosmos */
+
+        body {
+            background-color: #121212; /* Fondo oscuro */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        h1 {
+            font-size: 6rem;
+            color: #FF69B4; /* Color rosa vibrante */
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FF69B4, 0 0 40px #FF69B4, 0 0 50px #FF69B4, 0 0 60px #FF69B4, 0 0 70px #FF69B4;
+            margin-bottom: 50px;
+        }
+
+        h1::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/black-felt.png') repeat;
+            mix-blend-mode: lighten;
+            opacity: 0.2;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0) 70%);
+            opacity: 0.6;
+            filter: blur(8px);
+            animation: shimmer 2s infinite;
+        }
+
+        /* Botones */
+        .button {
+            font-size: 1.5rem;
+            color: #FF69B4;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 30px;
+            border: 2px solid #FF69B4;
+            border-radius: 5px;
+            position: relative;
+            transition: color 0.4s, box-shadow 0.4s;
+            margin: 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            color: #fff;
+            box-shadow: 0 0 10px #fff, 0 0 20px #FF69B4, 0 0 30px #FF69B4, 0 0 40px #FF69B4;
+        }
+
+        .button::before, .button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0) 70%);
+            opacity: 0.6;
+            filter: blur(8px);
+            transition: transform 0.4s;
+        }
+
+        .button::before {
+            transform: translate(-100%, -100%);
+        }
+
+        .button::after {
+            transform: translate(100%, 100%);
+        }
+
+        .button:hover::before, .button:hover::after {
+            transform: translate(0, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Kami</h1>
+    <!-- Botón de Preguntas y Respuestas -->
+    <a href="https://secreto.site/es/a29ko7" class="button">Preguntas y Respuestas</a>
+    
+    <!-- Botón para abrir el chat -->
+    <div class="button" onclick="openChat()">Chat</div>
+
+    <!-- Código de Tawk.to -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {};
+        Tawk_API.onLoad = function(){
+            Tawk_API.hideWidget();  // Oculta el widget cuando se carga la página
+        };
+
+        function openChat() {
+            Tawk_API.showWidget();  // Muestra el widget cuando se hace clic en el botón
+            Tawk_API.maximize();    // Maximiza el chat cuando se hace clic en el botón
+        }
+
+        var Tawk_LoadStart = new Date();
+        (function(){
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/66d60e1cea492f34bc0ce27e/1i6q2e7q6';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+</body>
+</html>
